@@ -21,8 +21,8 @@
         <p>Enter your nick</p>
         <p id="nickError"></p>
         <form id="setNick">
-            <input size="35" id="nickname">
-            <input type="submit">
+            <input size="35" id="nickname"/>
+            <input type="submit"/>
         </form>
     </div>
     
@@ -45,7 +45,7 @@
             var socket = io.connect();
             var $nickForm = $('#setNick');
             var $nickError = $('#nickError');
-            var $nickBox = $('#nickName');
+            var $nickBox = $('#nickname');
             var $users = $('#users');
             var $messageForm = $('#send-message');
             var $messageBox = $('#message');
@@ -65,11 +65,11 @@
             });
             
             socket.on('usernames', function(data){
-               var html = '';
-               for(i = 0; i < data.length; i++){
-                   html += data[i] + '<br>';
+               var usersList = '';
+               for(var i = 0; i < data.length; i++){
+                   usersList += data[i] + '<br>';
                }
-               $users.html(html);
+               $users.html(usersList);
             });
             
             $messageForm.submit(function(e){
