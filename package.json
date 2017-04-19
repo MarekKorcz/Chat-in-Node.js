@@ -4,7 +4,8 @@
     "description":"Chat in Node.js",
     "dependencies":{
         "socket.io":"latest",
-        "express":"latest"
+        "express":"latest",
+        "mongoose":"latest"
     },
     "author":"Mark"
 }
